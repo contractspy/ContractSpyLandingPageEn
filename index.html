@@ -267,7 +267,7 @@
 
   <!-- Form -->
   <section class="card" id="leadFormSection">
-    <h3>Interested? Tell us your requirements</h3>
+    <h3>Interested? Join the waitlist</h3>
     <form id="leadForm" action="https://formspree.io/f/myzbwqby" method="POST" novalidate>
       <div class="row-2">
         <div>
@@ -275,24 +275,28 @@
           <input id="name" name="name" placeholder="John Doe" autocomplete="name">
         </div>
         <div>
-          <label for="email">Email (optional)</label>
-          <input id="email" name="email" type="email" placeholder="john@example.com" autocomplete="email">
+          <label for="email">Email (required to join the waitlist)</label>
+          <input id="email" name="email" type="email" required placeholder="john@example.com" autocomplete="email">
         </div>
       </div>
 
       <fieldset>
-        <legend>What is especially relevant to you?</legend>
+        <legend>Which plan are you most interested in?</legend>
         <div class="options">
-          <label class="option"><input type="checkbox" name="interests[]" value="kfz"> Review & compare car insurance</label>
-          <label class="option"><input type="checkbox" name="interests[]" value="mietvertrag"> Review rental contracts & utility costs</label>
-          <label class="option"><input type="checkbox" name="interests[]" value="handy"> Analyse phone, internet or electricity contracts</label>
-          <label class="option"><input type="checkbox" name="interests[]" value="autokauf"> Check car purchase or leasing contracts</label>
+          <label class="option">
+            <input type="checkbox" name="plan_interest[]" value="starter-basic">
+            Starter (Basic)
+          </label>
+          <label class="option">
+            <input type="checkbox" name="plan_interest[]" value="worry-free-premium">
+            Worry-Free (Premium)
+          </label>
         </div>
       </fieldset>
 
       <div>
-        <label for="feedback">Additional thoughts (optional)</label>
-        <textarea id="feedback" name="feedback" placeholder="e.g. feedback or wishes …"></textarea>
+        <label for="feedback">Anything else you want to share? (optional)</label>
+        <textarea id="feedback" name="feedback" placeholder="e.g. how you plan to use ContractSpy, questions, ideas, or other input …"></textarea>
       </div>
 
       <label class="consent">
@@ -300,7 +304,7 @@
         <span>I agree that my data may be stored for contacting me.</span>
       </label>
 
-      <button type="submit" class="btn block" id="submitBtn">Submit</button>
+      <button type="submit" class="btn block" id="submitBtn">Join waitlist</button>
       <p class="muted" id="formMsg"></p>
     </form>
   </section>
